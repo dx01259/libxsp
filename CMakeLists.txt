@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 2.6)
+
+PROJECT(libxsp)
+
+SET(CXX_FLAGS
+    -g
+    -00
+    -Wall
+    -rdynamic)
+
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/build)
+set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/build/lib)
+
+INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR})
+#ADD_EXECUTABLE()
+
+
+ADD_SUBDIRECTORY(comm)
+ADD_SUBDIRECTORY(log)

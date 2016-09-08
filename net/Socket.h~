@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<sys/types.h>
+#include<sys/socket.h>
+#include<unistd.h>
+
+extern int Socket(int domain, int type, int protocol);
+
+extern int Bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen);
+
+extern int Listen(int sockfd, int backlog);
+
+extern int Accpet(int sockfd, struct sockaddr *addr, socklen_t *addrlen);
+
+extern ssize_t Send(int sockfd, const void *buf, size_t len, int flags);
+
+extern ssize_t Sendto(int sockfd, const void *buf, size_t len, int flags,
+		const struct sockaddr *dest_addr, socklen_t addrlen);
+
+extern ssize_t Recv(int sockfd, void *buf, size_t len, int flags);
+
+extern ssize_t Recvfrom(int sockfd, void *buf, size_t len, int flags,
+		struct sockaddr *src_addr, socklen_t *addrlen); 
+
+extern int Close(int fd);
